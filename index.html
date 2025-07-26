@@ -595,6 +595,48 @@
             box-shadow: 0 15px 35px rgba(244, 114, 182, 0.4);
         }
 
+        /* Footer */
+        .footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 40px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-logo-img {
+            height: 50px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #60a5fa;
+        }
+
+        .footer-copyright p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .hero-content,
@@ -622,6 +664,16 @@
 
             .nav-menu {
                 display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
             }
         }
     </style>
@@ -671,7 +723,7 @@
                     <p>Patients face overwhelming existential distress and fear about dying while families struggle with anticipatory grief and helplessness. Traditional counseling may not fully address these deep concerns in the limited time available. Novobeing offers a transformative solution, providing immersive comfort interventions that help patients process end-of-life concerns while creating meaningful final experiences for families.</p>
                 </div>
                 <div class="problem-image">
-                    <img src="./assets/stressed-therapist.webp" alt="Stressed Mental Health Professional">
+                    <img src="./assets/palliative-care-comfort.jpg" alt="Palliative Care Professional with Patient">
                 </div>
             </div>
         </div>
@@ -681,6 +733,9 @@
     <section class="video-section">
         <div class="container">
             <h2>Explore How Novobeing Creates Real Therapeutic Breakthroughs using Virtual Reality</h2>
+            <div style="text-align: center; margin-top: 40px;">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px; max-width: 100%;"></iframe>
+            </div>
         </div>
     </section>
 
@@ -723,7 +778,7 @@
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3>Virtual Visits to Meaningful Places</h3>
-                    <p>Enable patients to visit cherished locations one final time when physical travel is impossible, providing closure and peace through immersive experiences of childhood homes, wedding venues, or favorite destinations.</p>
+                    <p>Enable patients to visit cherished locations one final time when physical travel is impossible, providing closure and peace through immersive experiences.</p>
                 </div>
                 <div class="benefit-card">
                     <h3>Immersive Spiritual & Meditation Experiences</h3>
@@ -874,6 +929,25 @@
             <a href="https://buy.stripe.com/28E4gs1eU1KTaCE1mn9bO02" class="final-cta-button">Yes, I Want This Now →</a>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/novobeing-logo.png" alt="Novobeing" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <a href="./privacy-policy.html">Privacy Policy</a>
+                    <a href="./terms-of-service.html">Terms of Service</a>
+                    <a href="mailto:support@novobeing.com">Contact Support</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Novobeing. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
