@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Palliative Care with Immersive VR Comfort Solutions | Novobeing</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #f472b6, #ec4899);
+            color: white !important;
+            padding: 12px 24px !important;
+            border-radius: 25px !important;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #ec4899, #db2777) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            color: white;
+            padding: 120px 0 80px;
+            margin-top: 70px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .primary-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+
+        .problem-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .problem-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #1e293b;
+        }
+
+        .problem-text p {
+            font-size: 1.1rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .problem-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            text-align: center;
+        }
+
+        .video-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+        }
+
+        .features-section h2 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .features-section p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            opacity: 0.9;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .feature-card p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 80px 0;
+            background-color: #f8fafc;
+            text-align: center;
+        }
+
+        .results-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .results-image {
+            margin-bottom: 60px;
+        }
+
+        .results-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 0;
+        }
+
+        .benefits-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #2563eb;
+        }
+
+        .benefit-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .setup-note {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 1.2rem;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        /* Experiences Section */
+        .experiences-section {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+
+        .experiences-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .experience-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        .experience-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+        }
+
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #2563eb;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            color: #374151;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-title {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* How It Works Section */
+        .how-it-works-section {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+
+        .how-it-works-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .step-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 24px;
+        }
+
+        .step-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        .step-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* Package Section */
+        .package-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .package-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .package-image {
+            margin-bottom: 40px;
+        }
+
+        .package-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px auto;
+            max-width: 600px;
+        }
+
+        .guarantee-box h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .guarantee-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+
+        .pricing-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            color: #1e293b;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1e293b;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .price-description {
+            color: #64748b;
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: #374151;
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .pricing-features li:before {
+            content: "•";
+            color: #2563eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .final-cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .final-cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #f472b6, #ec4899);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(244, 114, 182, 0.4);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero-content,
+            .problem-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid,
+            .benefits-grid,
+            .experiences-grid,
+            .testimonials-grid,
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="./assets/novobeing-logo.png" alt="Novobeing" class="logo">
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#clinical-data">Clinical Data</a></li>
+                        <li><a href="#whats-included">What's Included</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#get-started" class="cta-button">Get Started</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform End-of-Life Care with Immersive Technology</h1>
+                    <p>Provide profound comfort and meaningful closure for patients facing end-of-life challenges with evidence-based virtual reality experiences that reduce anxiety, create final bonding moments, and support compassionate care</p>
+                    <a href="https://buy.stripe.com/28E4gs1eU1KTaCE1mn9bO02" class="primary-button">Yes, I Want This! →</a>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/patient-vr-comfort.png" alt="Patient using VR for comfort">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-content">
+                <div class="problem-text">
+                    <h2>When end-of-life anxiety meets limited therapeutic time...</h2>
+                    <p>Patients face overwhelming existential distress and fear about dying while families struggle with anticipatory grief and helplessness. Traditional counseling may not fully address these deep concerns in the limited time available. Novobeing offers a transformative solution, providing immersive comfort interventions that help patients process end-of-life concerns while creating meaningful final experiences for families.</p>
+                </div>
+                <div class="problem-image">
+                    <img src="./assets/stressed-therapist.webp" alt="Stressed Mental Health Professional">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h2>Explore How Novobeing Creates Real Therapeutic Breakthroughs using Virtual Reality</h2>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2>A New Way</h2>
+            <p>A first-of-its-kind immersive well-being solution designed to help patients feel calmer, more connected, and in control of their healing journey</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Therapeutic Experiences</h3>
+                    <p>Evidence-based modules designed to reset the nervous system and enhance mood.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Nature Escapes</h3>
+                    <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Interactive Breathing</h3>
+                    <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="clinical-data">
+        <div class="container">
+            <h2>The Results</h2>
+            <div class="results-image">
+                <img src="./assets/proven-benefits.png" alt="Novobeing Proven Benefits">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="container">
+            <h2>What you will get:</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Virtual Visits to Meaningful Places</h3>
+                    <p>Enable patients to visit cherished locations one final time when physical travel is impossible, providing closure and peace through immersive experiences of childhood homes, wedding venues, or favorite destinations.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Immersive Spiritual & Meditation Experiences</h3>
+                    <p>Help patients process existential concerns and find spiritual comfort through guided meditation and breathwork that helps address end-of-life anxiety and fear.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Family Bonding & Shared Experiences</h3>
+                    <p>Create meaningful final moments between patients and loved ones through shared virtual adventures, allowing families to connect and create lasting memories together during difficult times.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>24/7 Non-Pharmaceutical Comfort</h3>
+                    <p>Provide consistent comfort interventions that reduce emergency calls and supplement pain management when medication reaches its limits, offering natural relief without side effects.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Enhanced Staff Care Efficiency</h3>
+                    <p>Enable care teams to facilitate multiple patients simultaneously while maintaining quality compassionate care, reducing staff emotional exhaustion and improving care delivery efficiency.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Evidence-Based Programs</h3>
+                    <p>Deliver scientifically validated VR experiences designed specifically for therapeutic applications.</p>
+                </div>
+            </div>
+            <div class="setup-note">
+                And the best part? It only takes 5 minutes to set up and start using.
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section class="experiences-section">
+        <div class="container">
+            <h2>Our Experiences</h2>
+            <div class="experiences-grid">
+                <div class="experience-card">
+                    <h3>Interactive Breathing</h3>
+                    <p>Interactive breathwork and meditation sessions to induce calm and regulate stress quickly</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Nature Escapes</h3>
+                    <p>Serene photorealistic landscapes to reduce anxiety and promote relaxation</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Therapeutic Experiences</h3>
+                    <p>Evidence-based immersive modules designed to reset the nervous system and enhance mood</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2>Trusted by leading palliative care professionals</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <blockquote>"Since implementing Novobeing in our hospice unit, we've seen a 70% reduction in end-of-life anxiety episodes. Patients who were previously agitated and fearful now find peace through virtual visits to their childhood homes. Families tell us these final shared experiences have transformed their grief journey."</blockquote>
+                    <div class="testimonial-author">Dr. Maria Santos, MD</div>
+                    <div class="testimonial-title">Medical Director, Compassionate Care Hospice</div>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>"Novobeing has revolutionized our comfort care approach. When pain medication reaches its limits, VR provides consistent relief that our staff can deploy 24/7. We've reduced emergency comfort calls by 60% and our care teams report significantly less emotional exhaustion."</blockquote>
+                    <div class="testimonial-author">Jennifer Walsh, RN</div>
+                    <div class="testimonial-title">Palliative Care Coordinator, Mercy General Hospital</div>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>"The transformation in our patients' emotional wellbeing has been remarkable. What used to be overwhelming existential distress has become peaceful acceptance. Families can now create meaningful final memories together, and our staff can provide compassionate care more efficiently to multiple patients."</blockquote>
+                    <div class="testimonial-author">Rev. David Chen</div>
+                    <div class="testimonial-title">Chaplain & Bereavement Coordinator, Serenity Hospice Center</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Order Your Headsets</h3>
+                    <p>Order a Novobeing Kit that includes all software, hardware and accessories you need to offer Therapeutic VR.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Set Up Your System</h3>
+                    <p>Connect the headset to Wi-Fi, complete the onboarding steps, and install the optional wall mount if desired. No IT support required.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Invite Clients to Use It</h3>
+                    <p>Deploy the headset in a designated area and offer to your clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Section -->
+    <section class="package-section" id="whats-included">
+        <div class="container">
+            <h2>Everything You Need to Get Started</h2>
+            <div class="package-image">
+                <img src="./assets/package-contents.png" alt="What's Included in Novobeing Package">
+            </div>
+            <div class="guarantee-box">
+                <h3>100% Satisfaction Guaranteed</h3>
+                <p>Experience Novobeing risk-free with our 30-day money-back guarantee. If you're not completely satisfied, simply cancel within the first 30 days for a full refund—no questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2>Special Limited-Time Offer</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>One-Time Cost</h3>
+                    <div class="price">$699</div>
+                    <div class="price-description">Device, accessories & shipping</div>
+                    <ul class="pricing-features">
+                        <li>Meta Quest 3 Headset</li>
+                        <li>Full Accessories Kit</li>
+                        <li>Wall Mount</li>
+                        <li>Shipping</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Monthly Subscription</h3>
+                    <div class="price">$150/month</div>
+                    <div class="price-description">Monthly software subscription</div>
+                    <ul class="pricing-features">
+                        <li>Novobeing Software Suite</li>
+                        <li>50+ Therapeutic Experiences</li>
+                        <li>Premium Support</li>
+                        <li>Regular Content Updates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section" id="get-started">
+        <div class="container">
+            <h2>Ready to Transform End-of-Life Care with VR?</h2>
+            <p>$699 one-time payment + $150/month</p>
+            <a href="https://buy.stripe.com/28E4gs1eU1KTaCE1mn9bO02" class="final-cta-button">Yes, I Want This Now →</a>
+        </div>
+    </section>
+</body>
+</html>
+
